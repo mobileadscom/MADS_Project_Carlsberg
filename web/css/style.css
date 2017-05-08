@@ -1,0 +1,142 @@
+body {
+	margin: 0;
+}
+
+#nozzle-empty{
+	display: none;
+	height:103px;
+	width:75px;
+	position: relative;
+	left:27%;
+	top:23.5%;
+	opacity: 0;
+	transition: opacity 2.5s 1s;
+}
+#nozzle-pour{
+	position: absolute;
+	height:98%;
+	width:75px;
+	transition: height 0.19s cubic-bezier(0.620, 0.045, 0.855, 0.525) 0s;
+}
+#glass-full{
+	position: absolute;
+	clip: rect(213px, 90px, 213px, 0);
+	transition: clip 6.7s cubic-bezier(0.215, 0.610, 0.275, 0.99) 0.2s;
+	width:90px;
+	height: 213px;
+	left: 25%;
+}
+#glass-empty{
+	display: none;
+	height: 203px;
+	width:120px;
+	opacity: 0;
+	transition: opacity 2.5s;
+	position: relative;
+	left:28%;
+	top:28.5%;
+	z-index: 1000;
+}
+#first-screen{
+	position: relative;
+	width:320px;
+	height:480px;
+}
+#swipe-totap{
+	display: none;
+	height: 116px;
+	width:169px;
+	opacity: 0;
+	transition: opacity 2.4s 2s;
+	position: relative;
+	top: -42.5%;
+    left: 45.5%;
+}
+#hand-icon{
+	display: none;
+	width:70px;
+	height: 62px;
+	position: relative;
+    top: -62.5%;
+    left: 45%;
+    animation-name: swipe;
+    animation-duration: 2.2s;
+    animation-iteration-count: infinite;
+}
+#end-image {
+	display: none;
+	position: absolute;
+	left: 62%;
+	top: 25%;
+	width : 101px;
+	height: 335px;
+	opacity: 0;
+	transition: opacity 1s;
+}
+#end-screen {
+	display: none;
+	position: absolute;	
+	opacity: 0;
+	left: 0;
+	bottom: 0;
+	height: 34px;
+	width: 320px;
+	background-repeat: no-repeat;
+	transition: all 1s;
+	z-index: 1001;
+}
+@keyframes swipe{
+	0%{top:-62.5%;opacity:0;}
+	24%{opacity:1;}
+	80%{opacity: 1;}
+	100%{top:-45%;opacity:0; }
+}
+
+
+@media(min-width:480px){
+	#nozzle-empty{
+		height:209px;
+		width:152px;
+	    left: 23%;
+    	top: 25.5%;
+	}
+	#nozzle-pour{
+		width:152px;
+	}
+	#glass-full{
+		clip: rect(426px, 180px, 426px, 0);
+		width:180px;
+		height: 426px;
+		left: 25px;
+	}
+	#glass-empty{
+		height: 409px;
+		width:205px;
+		top: 29%;
+	}
+	#first-screen{
+		width: 768px;
+    	height: 1024px;
+	}
+	#swipe-totap{
+		height: 247px;
+		width:387px;
+		top: -38%;
+	    left: 44.7%;
+	}
+	#hand-icon{
+		width:140px;
+		height: 124px;
+	}
+	#end-image {
+		top: 28%;
+		left: 43%;
+		transform: scale(0.9, 0.9);
+		height: 652px;
+		width: 424px;
+	}
+	#end-screen {
+		width: 768px;
+		height: 80px;
+	}
+}
