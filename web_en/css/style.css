@@ -1,0 +1,151 @@
+body {
+	margin: 0;
+}
+
+#nozzle-empty{
+	display: none;
+	height: 195px;
+	width: 167px;
+	position: relative;
+	top: 14.57%;
+	left: 0px;
+	opacity: 0;
+	transition: opacity 2.5s 1s;
+	background-repeat: no-repeat;
+}
+#nozzle-pour{
+	position: absolute;
+	height: 0;
+	width: 170px;
+	left: 0px;
+	top: 0px;
+	transition: height 0.19s cubic-bezier(0.620, 0.045, 0.855, 0.525) 0s;
+	background-repeat: no-repeat;
+}
+#glass-full{
+	position: absolute;
+	clip: rect(213px, 90px, 213px, 0);
+	transition: clip 6.7s cubic-bezier(0.215, 0.610, 0.275, 0.99) 0.2s;
+	width:90px;
+	height: 190px;
+	left: 0;
+}
+#glass-empty{
+	display: none;
+	height: 203px;
+	width: 102px;
+	opacity: 0;
+	transition: opacity 2.5s;
+	position: relative;
+	left: 35.4%;
+	top: 9.5%;
+	z-index: 1000;
+}
+#first-screen{
+	position: relative;
+	width: 320px;
+	height: 480px;
+}
+#swipe-totap{
+	display: none;
+	height: 116px;
+	width:169px;
+	opacity: 0;
+	transition: opacity 2.4s 2s;
+	position: relative;
+	top: -56.5%;
+	left: 45.5%;
+	z-index: 1000;
+}
+#hand-icon{
+	display: none;
+	width:70px;
+	height: 62px;
+	position: relative;
+	top: -62.5%;
+	left: 45%;
+	animation-name: swipe;
+	animation-duration: 2.2s;
+	animation-iteration-count: infinite;
+	z-index: 1000;
+}
+#end-image {
+	display: none;
+	position: absolute;
+	left: 59.9%;
+	top: 21%;
+	width: 100px;
+	height: 335px;
+	opacity: 0;
+	transition: opacity 1s;
+}
+#end-screen {
+	display: none;
+	position: absolute;
+	opacity: 0;
+	left: 0;
+	bottom: 0;
+	height: 34px;
+	width: 320px;
+	background-repeat: no-repeat;
+	transition: all 1s;
+	z-index: 1001;
+}
+@keyframes swipe{
+	0%{top:-81.5%;opacity:0;}
+	24%{opacity:1;}
+	80%{opacity: 1;}
+	100%{top:-57%;opacity:0; }
+}
+
+
+
+@media(min-width:480px){
+	#nozzle-empty{
+		height: 390px;
+		width: 370px;
+		left: -2px;
+		top: 7.5%;
+	}
+	#nozzle-pour{
+		width: 330px;
+		height: 0;
+	}
+	#glass-full{
+		clip: rect(426px, 180px, 426px, 0);
+		width: 288px;
+		height: 426px;
+		left: 2px;
+	}
+	#glass-empty{
+		height: 462px;
+		width: 232px;
+		top: 8%;
+		left: 26.4%;
+	}
+	#first-screen{
+		width: 768px;
+    	height: 1024px;
+	}
+	#swipe-totap{
+		height: 247px;
+		width:387px;
+		top: -61%;
+		left: 44.7%;
+	}
+	#hand-icon{
+		width:140px;
+		height: 124px;
+	}
+	#end-image {
+		top: 22%;
+		left: 44%;
+		transform: scale(0.9, 0.9);
+		height: 652px;
+		width: 395px;
+	}
+	#end-screen {
+		width: 768px;
+		height: 80px;
+	}
+}
